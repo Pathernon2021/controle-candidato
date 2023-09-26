@@ -18,15 +18,15 @@ public class ProcessoSeletivo {
                     tentativasRealizadas++;
                 else
                  System.out.println("CONTATO REALIZADO COM SUCESSO");
-            }
-            if(atendeu)
+                      
+
+            } while( continuarTentando && tentativasRealizadas<3);
+   if(atendeu)
                 System.out.println("CONSEGUIMOS CONTATO COM " + candidato + "NA" + tentativasRealizadas+ "TENTATIVA");
             else
                 System.out.println(" NAO CONSEGUIMOS CONTATO COM " + candidato + ",NÚMERO MÁXIMO DE TENTATIVAS" + tentativasRealizadas+ "REALIZADA");
-
-            } while( continuarTentando && tentativasRealizadas<3);
-    } 
-    static boolean atender(){
+        } 
+        static boolean atender(){
         return new Random().nextInt(3)==1;
 }
      static void imprimirSelecionados (){
